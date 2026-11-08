@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CageCell.io</title>
+  <link rel="stylesheet" href="/0scr/Styling/style.css">
+  <link rel="stylesheet" href="content.css">
+  <link rel="stylesheet" href="/0scr/Styling/header.css">
+  <link rel="stylesheet" href="/0scr/Styling/loading-unloading.css">
+  <script src="/0scr/Scripting/script.js" defer></script>
+  <script src="content.js" defer></script>
+  <script type="text/javascript" src="chiptune2-helper.js"></script>
+  <script type="text/javascript" src="libopenmpt.js"></script>
+  <script type="text/javascript" src="chiptune2.js"></script>
+
+</head>
+<body>
+  <div id="overlay" class="overlay"></div>
+  <div id="overlay2" class="active"></div>
+
+<!-- Header -->
+  <div id="header">
+    <button id="open-btn" class="open-sidebar"><span>☰</span></button>
+      <div id="title-bar-header">
+        ADD
+      </div>
+    <div class="text-container">
+      
+      <p>Moin, this is all work in progress</p>
+    </div>
+    <div id="my-github-logo" class="github-logo">
+      <a href="https://github.com/Cagecellag/cagecellag.github.io" target="_blank" rel="noopener noreferrer" title="GitHub repo of this website">
+        <svg height="32" aria-hidden="true" viewBox="0 0 24 24" version="1.1" width="32" data-view-component="true" class="octicon octicon-mark-github v-align-middle">
+          <path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+<!-- Sidebar -->
+  <div id="sidebar" class="hidden">
+    <button id="close-btn" class="close-sidebar">✖</button>
+    <h2>Menu</h2>
+    <p>Here, more stuff to look at</p>
+    <ul>
+      <li><a href="/" onclick="transitionPage(event)">Home page</a></li>
+      <li><a href="/main-page" onclick="transitionPage(event)">Main page</a></li>
+      <li><a href="/sideloading-docs" onclick="transitionPage(event)">My Sideloading Docs</a></li>
+    </ul>
+  </div>
+
+
+  <!-- Main content -->
+  <div id="main-content">
+
+   
+
+
+    <div id="content">
+            
+      <div id="controls" class="banner">
+        
+      
+        
+
+      </div>
+      <div id="choosefile" class="banner">
+        <input type="file" id="files" name="files">
+      </div>
+      <div id="chooseurl" class="banner">
+        <div>
+          <label data-protonpass-form="">External URL
+            <input type="text" id="exturl" name="exturl">
+            <input type="button" value="Submit" id="submiturl" name="submiturl">
+          </label>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="player-all">
+
+      
+
+      <div id="demos">
+
+        <div class="title-bar">
+          <span>Demo Songs</span>
+          <button class="window-close" type="button" aria-label="Close Demo Songs window">×</button>
+        </div>
+        <h2>Demo Songs</h2>
+        <div class="demo-selectList">
+          
+          <a class="song" data-modurl="/0scr/Modules/CORE - ConceptDraw Pro NetDiagrammer PlugIn 2.0 MacOSX kg.xm"><span class="size">42kb</span>Phallanx by CORE
+          </a>
+          <a class="song" data-modurl="/0scr/Modules/DARKSiDERS - Highschool Possession Game installer.mod"><span class="size">92kb</span>tecknohouse91 by DARKSiDERS
+          </a>
+          <a class="song" data-modurl="/0scr/Modules/CORE - Avid Software kg.mod"><span class="size">66kb</span>crockett's ship by CORE
+          </a>
+          <a class="song" data-modurl="/0scr/Modules/TSRh - ACDSee Video Converter 3 kg.xm"><span class="size">59kb</span>Porn_Industry by TSRh
+          </a>
+          <a class="song" data-modurl="/0scr/Modules/DYNAMITE - Winamp 5.0RC8 crk.xm"><class class="size">35kb</class>unreeeal superhero 3 by DYNAMITE
+          </a>
+          <a class="song" data-modurl="/0scr/Modules/lhs_dfs4.mod"><class class="size">19kb</class>DFS Installer #4
+          </a>
+          <a class="song" data-modurl="/0scr/Modules/2nd_pm.s3m"><class class="size">588kb</class>UnreaL ][ / PM
+          </a>
+        </div>
+      </div>
+
+      <div class="musicplayer" id="chiptuneplayer">
+
+        <div class="title-bar">
+          <span>Chiptune Player</span>
+          <button class="window-close" type="button" aria-label="Close Chiptune Player window">×</button>
+        </div>
+
+        <div id="metadata" class="banner">
+          <span id="title">chiptune.js</span><br>
+          <span id="artist"></span><br>
+          <span id="filename"></span><br>
+        </div>
+
+        <div class="controles" aria-label="Audio controls">
+          <button class="transport-btn" id="play" type="button"><span>play</span></button>
+          <button class="transport-btn" id="pause" type="button"><span>pause</span></button>
+          <button class="transport-btn" id="stop" type="button"><span>stop</span></button>
+        </div>
+
+        
+        <div id="volume-container">
+          <img class="volume-arrow" src="/0scr/Media/volume-arrows-horizontal.svg">
+          <div class="volume-background">
+            <input id="volume" type="range" min="0" max="1" step="0.01">
+          </div>
+        </div>
+        
+        <div  id="seekbar-container">
+          <div class="seekbar-background">
+            <input id="seekbar" type="range" min="0" max="100" step="0.01" value="0">
+          </div>
+          <span id="time-display">0:00/0:00</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <a>mptm, mod, s3m, xm, it, 667, 669, amf, ams, c67, cba, dbm, digi, dmf, dsm, dsym, dtm, etx, far, fc, fc13, fc14, fmt, fst, ftm, imf, ims, ice, j2b, m15, mdl, med, mms, mt2, mtm, mus, nst, okt, plm, psm, pt36, ptm, puma, rtm, sfx, sfx2, smod, st26, stk, stm, stx, stp, symmod, tcb, gmc, gtk, gt2, ult, unic, wow, xmf, gdm, mo3, oxm, umx, xpk, ppm, mmcmp</a>
+    <br>
+  
+     
+    <!-- Dont delete or else windows dont work -->
+    <button id="load-ppt"></button>
+
+
+    <p>https://github.com/zeozeozeo/jslibxm</p>
+
+    <a href="vmfunc_style_recreation">VMFunc Style Recreation</a>
+
+
+</body>
+</html>

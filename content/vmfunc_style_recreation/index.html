@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STMH Terminal Desktop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <section class="boot" id="boot">
+    <div class="boot-card">
+      <p class="muted">sys/init</p>
+      <h1>STMH.desktop</h1>
+      <p>booting into STMH's workspace...</p>
+      <button id="continueBtn">continue</button>
+    </div>
+  </section>
+
+
+  <main class="desktop">
+    <div class="icon-grid">
+      <a class="desktop-icon" href="#" data-window="mainWindow">
+        <span class="icon-img">💻</span>
+        <span>Terminal</span>
+      </a>
+
+      <a class="desktop-icon" href="https://github.com/" target="_blank">
+        <span class="icon-img">🗂️</span>
+        <span>GitHub</span>
+      </a>
+
+      <a class="desktop-icon" href="#" data-window="linksWindow">
+        <span class="icon-img">🌐</span>
+        <span>Links</span>
+      </a>
+
+      <a class="desktop-icon" href="#" data-window="buttonWindow">
+        <span class="icon-img">🔖</span>
+        <span>Button</span>
+      </a>
+
+      <a class="desktop-icon" href="#" data-window="clockWindow">
+        <span class="icon-img">🕒</span>
+        <span>Time</span>
+      </a>
+
+      <a class="desktop-icon" href="#" data-window="trashWindow">
+        <span class="icon-img">🗑️</span>
+        <span>Recycle Bin</span>
+      </a>
+    </div>
+
+    <section class="window small-window" id="linksWindow" style="left: 34px; top: 126px;">
+      <header class="titlebar">
+        <span>Links</span>
+        <div class="window-actions">
+          <button>_</button><button>□</button><button class="close-btn">×</button>
+        </div>
+      </header>
+      <div class="window-body">
+        <p class="category">-- projects --</p>
+        <a href="#">[-] my blog</a>
+        <a href="#">[-] portfolio</a>
+        <a href="#">[-] tools</a>
+
+        <p class="category">-- socials --</p>
+        <a href="#">[-] GitHub</a>
+        <a href="#">[-] Twitter / X</a>
+        <a href="#">[-] SoundCloud</a>
+
+        <p class="category">-- other --</p>
+        <a href="#">[-] diary</a>
+        <a href="#">[-] RSS</a>
+        <a href="#">[-] ident.txt</a>
+      </div>
+    </section>
+
+   
+    <section class="window main-window active-window" id="mainWindow" style="left: 260px; top: 70px;">
+      <header class="titlebar">
+        <span>celeste@void:~/</span>
+        <div class="window-actions">
+          <button>_</button><button>□</button><button class="close-btn">×</button>
+        </div>
+      </header>
+
+      <div class="terminal-body">
+<pre class="ascii">
+# inspired by
+ ██╗   ██╗███╗   ███╗███████╗██╗   ██╗███╗   ██╗ ██████╗
+ ██║   ██║████╗ ████║██╔════╝██║   ██║████╗  ██║██╔════╝
+ ██║   ██║██╔████╔██║█████╗  ██║   ██║██╔██╗ ██║██║
+ ╚██╗ ██╔╝██║╚██╔╝██║██╔══╝  ██║   ██║██║╚██╗██║██║
+  ╚████╔╝ ██║ ╚═╝ ██║██║     ╚██████╔╝██║ ╚████║╚██████╗
+   ╚═══╝  ╚═╝     ╚═╝╚═╝      ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝
+</pre>
+
+        <nav class="tabs" aria-label="Profile tabs">
+          <button class="tab active" data-tab="about">About</button>
+          <button class="tab" data-tab="philes">Philes</button>
+          <button class="tab" data-tab="friends">Friends</button>
+          <button class="tab" data-tab="music">Music</button>
+          <button class="tab" data-tab="network">Network</button>
+          <button class="tab" data-tab="contact">Contact</button>
+        </nav>
+
+        <section class="tab-panel active" id="about">
+          <h2>Profile</h2>
+          <p><b>handle:</b> RealSTMH</p>
+          <p>
+            mostly known for: Being good at everything
+          </p>
+          <p>
+            welcome to my small corner of the internet.
+          </p>
+          <p class="inline-links">
+            <a href="#">github</a> · <a href="#">soundcloud</a> · <a href="#">ident.txt</a>
+          </p>
+          <p class="updated">last updated: 2026-05-02</p>
+        </section>
+
+        <section class="tab-panel" id="philes">
+          <h2>Philes</h2>
+          <div class="list-row"><span>📄</span><a href="#">building</a><time>2026</time></div>
+          <div class="list-row"><span>📄</span><a href="#">This</a><time>2026</time></div>
+          <div class="list-row"><span>📄</span><a href="#">for</a><time>2025</time></div>
+          <div class="list-row"><span>📄</span><a href="#">cagecell</a><time>2025</time></div>
+          <div class="list-row"><span>📄</span><a href="#">idk what to write here</a><time>2024</time></div>
+        </section>
+
+        <section class="tab-panel" id="friends">
+          <h2>Friends</h2>
+          <p class="button-wall">
+            <a href="#">one</a>
+            <a href="#">two</a>
+            <a href="#">three</a>
+            <a href="#">four</a>
+            <a href="#">five</a>
+            <a href="#">Six Seven</a>
+          </p>
+        </section>
+
+        <section class="tab-panel" id="music">
+          <h2>Music</h2>
+          <p>I listen to whatever</p>
+          <p>My Spotify: <a href="#">Spotify.com/idk</a></p>
+          <p class="construction">UNDER CONSTRUCTION</p>
+        </section>
+
+        <section class="tab-panel" id="network">
+          <h2>Network Information</h2>
+          <p>Indicate what servers are online</p>
+
+          <table class="status-table">
+            <thead>
+              <tr><th>Server</th><th>Status</th><th>Latency</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>STMH-01</td><td><span class="online">online</span></td><td>24ms</td></tr>
+              <tr><td>STMH-02</td><td><span class="offline">offline</span></td><td>-</td></tr>
+              <tr><td>STMH-03</td><td><span class="online">online</span></td><td>41ms</td></tr>
+            </tbody>
+          </table>
+
+          <p class="updated">Last updated: <span id="lastUpdated">-</span></p>
+        </section>
+
+        <section class="tab-panel" id="contact">
+          <h2>Contact</h2>
+          <p>GitHub: <a href="#">idk</a></p>
+          <p>Twitter: <a href="#">idk</a></p>
+          <p>Email: <a href="mailto:idk@example.com">idk@example.com</a></p>
+
+          <div class="note">
+            <h3>Note</h3>
+            <p>Just email me</p>
+          </div>
+
+          <div class="dialog-buttons">
+            <button>OK</button>
+            <button>Cancel</button>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="window button-window hidden-window" id="buttonWindow" style="right: 46px; top: 125px;">
+      <header class="titlebar">
+        <span>My button</span>
+        <div class="window-actions">
+          <button>_</button><button>□</button><button class="close-btn">×</button>
+        </div>
+      </header>
+      <div class="window-body">
+        <div class="site-button">STMH</div>
+        <textarea readonly id="buttonCode"><a href="https://yoursite.com" target="_blank"><img src="button.png" alt="your site" width="88" height="31"></a></textarea>
+        <button id="copyBtn">Copy</button>
+      </div>
+    </section>
+
+    <section class="window clock-window hidden-window" id="clockWindow" style="right: 86px; bottom: 82px;">
+      <header class="titlebar">
+        <span>timedatectl.d</span>
+        <div class="window-actions">
+          <button>_</button><button>□</button><button class="close-btn">×</button>
+        </div>
+      </header>
+      <div class="window-body">
+        <p>It is currently:</p>
+        <h2 id="bigClock">--:--:--</h2>
+      </div>
+    </section>
+
+    <section class="window trash-window hidden-window" id="trashWindow" style="left: 70px; bottom: 100px;">
+      <header class="titlebar">
+        <span>Recycle Bin</span>
+        <div class="window-actions">
+          <button>_</button><button>□</button><button class="close-btn">×</button>
+        </div>
+      </header>
+      <div class="window-body">
+        <p>Nothing here except old screenshots.</p>
+      </div>
+    </section>
+
+    <section class="start-menu" id="startMenu">
+      <div class="start-side">Windows 98</div>
+      <div class="start-links">
+        <a href="#" data-window="mainWindow">💻 Terminal</a>
+        <a href="#" data-window="linksWindow">🌐 Links</a>
+        <a href="#" data-window="buttonWindow">🔖 Button</a>
+        <a href="#" data-window="clockWindow">🕒 Time</a>
+        <hr>
+        <a href="#">🔒 Log Off user...</a>
+        <a href="#">⏻ Shut Down...</a>
+      </div>
+    </section>
+
+    <footer class="taskbar">
+      <button class="start-btn" id="startBtn">
+        <span>🪟</span> Start
+      </button>
+
+      <div class="task-items">
+        <button data-window="mainWindow">Terminal</button>
+        <button data-window="linksWindow">Links</button>
+        <button data-window="buttonWindow">Button</button>
+      </div>
+
+      <div class="tray">
+        <span>◄ ► ►|</span>
+        <span id="taskClock">--:--</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

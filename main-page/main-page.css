@@ -1,0 +1,31 @@
+#main-content {
+  font-family: sans-serif;
+  padding: 40px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+#center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }  
+    .inline-header { 
+      display: flex;
+      align-items: center;
+      gap: 1rem; }
+    .inline-header img {
+      max-height: 60px;
+      width: auto; }
+
+#text01,
+#text02,
+#text03 {
+  margin-top: 80px;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #dcdcdc;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  a { color: #b6b5b5;}
+}

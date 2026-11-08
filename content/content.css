@@ -1,0 +1,396 @@
+@font-face {
+  font-family: 'abduction2002';
+  src: url('/0scr/Fonts/abduction2002.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PressStart2P-Regular';
+  src: url('/0scr/Fonts/PressStart2P-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #008080;
+}
+
+#main-content {
+  padding-top: 100px;
+}
+
+.bombay-embed {
+  width: 100%;
+  max-width: 1100px;
+  height: 600px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  display: block;
+  margin: 0 auto;
+}
+
+#main-content button {
+  font-size: 11px;
+  box-sizing: border-box;
+  border: none;
+  background: silver;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-image: none;
+  box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px grey,inset 2px 2px #dfdfdf;
+  border-radius: 0;
+  min-width: 75px;
+  min-height: 23px;
+  padding: 0 12px;
+}
+
+
+#main-content button:active {
+  border-top-color: #888;
+  border-left-color: #888;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+  box-shadow: inset -1px -1px 0 #fff, inset 1px 1px 0 #555;
+}
+
+#main-content button span {
+  position: relative;
+}
+
+#main-content button:active span {
+  top: 2px;
+  left: 1px;
+}
+
+#load-ppt span::after {
+  content: "Load presentation";
+}
+
+#load-ppt.active span::after {
+  content: "Unload presentation";
+}
+
+.player-all {
+  display: flex;
+  position: center;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+#demos {
+  height: auto;
+  width: 400px;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 4px;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px grey,inset 2px 2px #fff;
+  border-radius: 0;
+  min-width: 75px;
+  min-height: 23px;
+  padding: 3px 3px;
+  color: black;
+  background-color: silver;
+  position: relative;
+  font-family: 'PressStart2P-Regular';
+  font-size: 11px;
+  flex-shrink: 0;
+}
+.demo-selectList {
+  position: relative ;
+  background-color: #fff;
+  left: 20px;
+  width: 350px;
+  height: 100px;
+  overflow: scroll;
+}
+
+.demo-selectList .song {
+  box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px grey,inset 2px 2px #fff;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.demo-selectList .song .size {
+  margin-left: 10px;
+  text-align: right;
+  float: right;
+}
+
+
+.musicplayer#chiptuneplayer {
+  height: 200px;
+  width: 500px;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 4px;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px grey,inset 2px 2px #fff;
+  border-radius: 0;
+  min-width: 75px;
+  min-height: 23px;
+  padding: 3px 3px;
+  color: black;
+  background-color: silver;
+  position: relative;
+  font-family: 'PressStart2P-Regular';
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+#volume-container {
+  position: absolute;
+  right: 40px;
+  top: 167px;
+  height: 81px;
+  width: 47px;
+}
+
+.volume-arrow {
+  top: 8px;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+/*
+The old style of the volume control was a simple rectangle with a gradient background. The new style uses a repeating linear gradient to create a more visually appealing design.
+.volume-background {
+  height: 81px;
+  width: 31px;
+  align-items: center;
+  display: flex;
+  padding-right: auto;
+  position: absolute;
+  right: 0px;
+  
+
+  background-image: 
+    repeating-linear-gradient(to right, #828282 0 1px, transparent 1px 2px),
+    repeating-linear-gradient(to right, #828282 0 1px, transparent 1px 2px),
+    repeating-linear-gradient(to bottom, #828282 0 1px, transparent 1px 2px),
+    repeating-linear-gradient(to bottom, #828282 0 1px, transparent 1px 2px);
+
+  background-position: 
+    top left,
+    bottom left,
+    top right,
+    top left;
+    
+  background-size:
+    100% 1px,
+    100% 1px,
+    1px 100%,
+    1px 100%;
+
+  background-repeat: no-repeat;
+} 
+
+#volume {
+  margin-left: 5px;
+  margin-top: 3px;
+  writing-mode: vertical-lr;
+  direction: rtl;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 65px;
+  background: transparent;  
+  outline: none;
+  
+}
+
+ ── Thumb ── 
+#volume::-moz-range-thumb {
+  top: 3px;
+  width: 21px;
+  height: 11px;
+  border-radius: 0;
+  background: #c3c3c3;
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 21px;
+  height: 11px;
+  border-radius: 0;
+  background: #c3c3c3;
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+  border: none;
+  cursor: pointer;
+  margin-left: -8px;
+}
+
+ /*── Track ──
+#volume::-moz-range-track {
+  box-shadow: inset -1px -1px #ffffff, inset 1px 1px #828282, inset -2px -2px #c3c3c3, inset 2px 0px rgb(0, 0, 0);
+  width: 4px;
+  
+}
+
+#volume::-webkit-slider-runnable-track {
+  box-shadow: inset -1px -1px #ffffff, inset 1px 1px #828282, inset -2px -2px #c3c3c3, inset 2px 0px rgb(0, 0, 0);
+  width: 4px;
+  background: #c0c0c0;
+  margin-left: 6px;
+}*/
+
+.controles {
+  position: absolute;
+  display: flex;
+  gap: 4px;
+  bottom: 5px;
+  left: 15px;
+}
+#main-content .transport-btn.active {
+  box-shadow: inset -1px -1px 0 #fff, inset 1px 1px 0 #555;
+}
+
+#main-content .transport-btn.active span {
+  top: 2px;
+  left: 1px;
+}
+
+
+
+#seekbar-container {
+  position: absolute;
+  bottom: 40px; /*This is the space between the seekbar and the bottom of the chiptuneplayer container*/
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  left: 15px;
+  right: 15px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.seekbar-background {
+  background-color: silver;
+  
+  color: #1d1d1d;
+  border-width: 4px;
+  box-sizing: border-box;
+
+  flex: 1;
+  height: 25px;
+  margin-right: 10px;
+  display: flex;
+}
+#seekbar {
+  width: 100%;
+  appearance: none;
+  border-radius: 0px;
+  background: linear-gradient(
+    to right,
+    #0000ff 0%,
+    #0000ff var(--progress),
+    #ffffff00 var(--progress),
+    #3d0d0d00 100%
+  );
+  padding: 0;
+  box-shadow: inset -1px -1px #dfdfdf,inset 1px 1px #0a0a0a,inset -1px -1px #fff,inset 2px 2px gray ;
+  margin: 0
+}
+#seekbar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: none;
+  cursor: default;
+}
+#seekbar::-moz-range-thumb {
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: none;
+  cursor: default;
+}
+
+
+#time-display {
+  background-color: silver;
+  box-sizing: border-box;
+  box-shadow: inset -1px -1px #dfdfdf,inset 1px 1px #0a0a0a,inset -1px -1px #fff,inset 2px 2px gray ;
+  padding: 5px;
+  text-align: center;
+  font-size: 12px;
+  height: 25px;
+}
+
+#choosefile input {
+  padding: 0.5rem;
+  background: #5a3434;
+  border-radius: 0.35rem;
+  border: 1px solid rgba(215, 99, 34, 0.78);
+}
+
+#choosefile,
+#controls,
+#chooseurl {
+  margin-top: 1.9rem;
+}
+
+#demos>div .song,
+#chooseurl>div .song {
+  display: block;
+  text-decoration: none;
+  color: #4C4CBD;
+}
+
+#demos,
+#chiptuneplayer {
+  position: relative;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.title-bar {
+  background: linear-gradient(90deg,navy,#1084d0);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 3px;
+  height: 19px;
+  font-size: 10px;
+  color: white;
+
+  cursor:grab;
+  user-select: none;
+  touch-action: none;
+}
+
+.title-bar:active {
+  cursor:grabbing;
+}
+
+#main-content .window-close {
+  box-sizing: border-box;
+  width: 18px;
+  height: 14px;
+  min-width: 18px;
+  min-height: 14px;
+  padding: 0;
+  color: #000;
+  font-size: 11px;
+  line-height: 10px;
+  border: 1px solid #fff;
+  box-shadow: inset -1px -1px #404040, inset 1px 1px #dfdfdf;
+  cursor: pointer;
+}

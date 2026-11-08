@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'BlitzBold';
+  src: url('/0scr/Fonts/BlitzBold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #2e2e31; 
+}
+
+#main-content {
+  font-family: sans-serif;
+  text-align: center !important;
+  padding: 40px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+#main-content h1 {
+  font-family: 'BlitzBold';
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+#main-content-links {
+  display: inline-block;
+  text-align: left;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+#main-content-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#main-content-links a:hover {
+  text-decoration: underline;
+}
+
+

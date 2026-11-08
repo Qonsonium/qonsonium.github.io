@@ -1,0 +1,38 @@
+/* Reset body margin */
+body {
+  margin: 0;
+}
+
+/* Fade-out overlay (when leaving the page) */
+.overlay {
+  position: fixed;
+  inset: 0; /* shorthand for top/left/right/bottom: 0 */
+  background: rgb(48, 48, 48);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease; /* match JS 600ms */
+  z-index: 1000;
+}
+
+/* When activated (during page leave) */
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Fade-in overlay (when entering or restoring page) */
+#overlay2 {
+  position: fixed;
+  inset: 0;
+  background: rgb(48, 48, 48);
+  opacity: 1; /* starts visible */
+  pointer-events: none;
+  transition: opacity 0.6s ease; /* same duration as JS */
+  z-index: 1000;
+}
+
+/* Once .active is removed, fade out smoothly */
+#overlay2:not(.active) {
+  opacity: 0;
+  pointer-events: none;
+}
