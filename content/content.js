@@ -1,27 +1,6 @@
 const btn = document.getElementById("load-ppt");
 const container = document.getElementById("ppt-container");
 
-btn.addEventListener("click", () => {
-
-
-
-if (isActive) {
-    container.innerHTML = `
-        <iframe 
-        src="https://1drv.ms/p/c/7e906219fa19eb95/IQQYKa1E75O7TZ6j1z7Astv-AZjy4f_2CUw3OpgtOHm07Wk" 
-        class="bombay-embed"
-        loading="lazy"
-        title="Presentation"> 
-        </iframe>
-    `;
-  } else {
-    container.innerHTML = "";
-  }
-});
-
-
-
-
 const seek = document.getElementById('seekbar');
 if (seek) {
   function updateSeekBg() {
@@ -85,7 +64,7 @@ if (seek) {
     bar.addEventListener("pointermove", (e) => {
       if (activePointer !== e.pointerId) return;
 
-      const minLeft = Math.min(0, 96 - win.offsetWidth);
+      const minLeft = Math.min(0, 100% - win.offsetWidth);
       const maxLeft = window.innerWidth - win.offsetWidth;
       const left = Math.min(maxLeft, Math.max(minLeft, e.clientX - offsetX));
       const top = Math.min(
