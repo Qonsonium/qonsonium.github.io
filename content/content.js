@@ -36,7 +36,7 @@ if (seek) {
   updateSeekBg();
 }
 (() => {
-  const windowIds = ["demos", "chiptuneplayer"];
+  const windowIds = ["demos", "chiptuneplayer", "supported-formats"];
   let highestZ = 100;
 
   windowIds.forEach((id) => {
@@ -47,6 +47,17 @@ if (seek) {
     if (!win || !bar) {
       return;
     }
+
+    document.querySelectorAll(`[data-open-window="${id}"]`).forEach((opener) => {
+      opener.addEventListener("click", (e) => {
+        if (opener instanceof HTMLAnchorElement) {
+          e.preventDefault();
+        }
+
+        win.hidden = false;
+        win.style.zIndex = `${++highestZ}`;
+      });
+    });
 
     let activePointer = null;
     let offsetX = 0;

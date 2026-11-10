@@ -125,6 +125,11 @@ body {
   float: right;
 }
 
+.supported-formats-btn {
+  position: absolute;
+  right: 10px;
+  top: 35px;
+}
 
 .musicplayer#chiptuneplayer {
   height: 200px;
@@ -370,7 +375,6 @@ The old style of the volume control was a simple rectangle with a gradient backg
   height: 19px;
   font-size: 10px;
   color: white;
-
   cursor:grab;
   user-select: none;
   touch-action: none;
@@ -393,4 +397,25 @@ The old style of the volume control was a simple rectangle with a gradient backg
   border: 1px solid #fff;
   box-shadow: inset -1px -1px #404040, inset 1px 1px #dfdfdf;
   cursor: pointer;
+}
+
+#supported-formats {
+  height: auto;
+  width: 400px;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 4px;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px grey,inset 2px 2px #fff;
+  border-radius: 0;
+  min-width: 75px;
+  min-height: 23px;
+  padding: 3px 3px;
+  color: black;
+  background-color: silver;
+  position: relative;
+  font-family: 'PressStart2P-Regular';
+  font-size: 11px;
+  flex-shrink: 0;
 }

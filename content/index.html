@@ -94,6 +94,7 @@
           <button class="window-close" type="button" aria-label="Close Demo Songs window">×</button>
         </div>
         <h2>Demo Songs</h2>
+        <button class="supported-formats-btn" type="button" data-open-window="supported-formats"><span>Supported Formats</span></button>
         <div class="demo-selectList">
           
           <a class="song" data-modurl="/0scr/Modules/CORE - ConceptDraw Pro NetDiagrammer PlugIn 2.0 MacOSX kg.xm"><span class="size">42kb</span>Phallanx by CORE
@@ -104,15 +105,15 @@
           </a>
           <a class="song" data-modurl="/0scr/Modules/TSRh - ACDSee Video Converter 3 kg.xm"><span class="size">59kb</span>Porn_Industry by TSRh
           </a>
-          <a class="song" data-modurl="/0scr/Modules/DYNAMITE - Winamp 5.0RC8 crk.xm"><class class="size">35kb</class>unreeeal superhero 3 by DYNAMITE
+          <a class="song" data-modurl="/0scr/Modules/DYNAMITE - Winamp 5.0RC8 crk.xm"><span class="size">35kb</span>unreeeal superhero 3 by DYNAMITE
           </a>
-          <a class="song" data-modurl="/0scr/Modules/lhs_dfs4.mod"><class class="size">19kb</class>DFS Installer #4
+          <a class="song" data-modurl="/0scr/Modules/lhs_dfs4.mod"><span class="size">19kb</span>DFS Installer #4
           </a>
-          <a class="song" data-modurl="/0scr/Modules/2nd_pm.s3m"><class class="size">588kb</class>UnreaL ][ / PM
+          <a class="song" data-modurl="/0scr/Modules/2nd_pm.s3m"><span class="size">588kb</span>UnreaL ][ / PM
           </a>
-          <a class="song" data-modurl="/0scr/Modules/kZ - PowerCHM 6.7 crk.xm"><class class="size">272kb</class>- Angry#Youth
+          <a class="song" data-modurl="/0scr/Modules/kZ - PowerCHM 6.7 crk.xm"><span class="size">272kb</span>- Angry#Youth
           </a>
-          <a class="song" data-modurl="/0scr/Modules/Classic - Ski Or Die intro.fc14"><class class="size">17kb</class>Ski Or Die intro
+          <a class="song" data-modurl="/0scr/Modules/Classic - Ski Or Die intro.fc14"><span class="size">17kb</span>Ski Or Die intro
           </a>
         </div>
       </div>
@@ -150,14 +151,32 @@
           </div>
           <span id="time-display">0:00/0:00</span>
         </div>
+      </div>
 
+      <div id="supported-formats" hidden>
+        <div class="title-bar">
+          <span>Supported Formats</span>
+          <button class="window-close" type="button" aria-label="Close Supported Formats window">×</button>
+        </div>
+        <h2>Supported Formats</h2>
+        <a>mptm, mod, s3m, xm, it, 667, 669, amf, ams, c67, cba, dbm, digi, 
+          dmf, dsm, dsym, dtm, etx, far, fc, fc13, fc14, fmt, fst, ftm, imf, 
+          ims, ice, j2b, m15, mdl, med, mms, mt2, mtm, mus, nst, okt, plm, psm, 
+          pt36, ptm, puma, rtm, sfx, sfx2, smod, st26, stk, stm, stx, stp, symmod, 
+          tcb, gmc, gtk, gt2, ult, unic, wow, xmf, gdm, mo3, oxm, umx, xpk, ppm, mmcmp</a>
       </div>
 
     </div>
 
-    <a>mptm, mod, s3m, xm, it, 667, 669, amf, ams, c67, cba, dbm, digi, dmf, dsm, dsym, dtm, etx, far, fc, fc13, fc14, fmt, fst, ftm, imf, ims, ice, j2b, m15, mdl, med, mms, mt2, mtm, mus, nst, okt, plm, psm, pt36, ptm, puma, rtm, sfx, sfx2, smod, st26, stk, stm, stx, stp, symmod, tcb, gmc, gtk, gt2, ult, unic, wow, xmf, gdm, mo3, oxm, umx, xpk, ppm, mmcmp</a>
-    <br>
-  
+    <p>
+      &#60;button type="button" data-open-window="supported-formats"&#62
+      Show Supported Formats
+      &#60;/button&#62
+
+      &#60;a href="#supported-formats" data-open-window="supported-formats"&#62
+        Show Supported Formats
+      &#60;/a&#62
+    </p>
      
     <!-- Dont delete or else windows dont work -->
     <button id="load-ppt"></button>
