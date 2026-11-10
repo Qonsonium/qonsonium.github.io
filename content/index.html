@@ -9,9 +9,15 @@
   <link rel="stylesheet" href="/0scr/Styling/loading-unloading.css">
   <script src="/0scr/Scripting/script.js" defer></script>
   <script src="content.js" defer></script>
-  <script type="text/javascript" src="chiptune2-helper.js"></script>
+  <script type="text/javascript">
+    window.libopenmpt = window.libopenmpt || {};
+    window.libopenmpt.locateFile = function (filename) {
+      return './' + filename;
+    };
+  </script>
   <script type="text/javascript" src="libopenmpt.js"></script>
   <script type="text/javascript" src="chiptune2.js"></script>
+  <script type="text/javascript" src="chiptune2-helper.js"></script>
 
 </head>
 <body>
@@ -64,7 +70,7 @@
 
       </div>
       <div id="choosefile" class="banner">
-        <input type="file" id="files" name="files">
+        <input type="file" id="files" name="files" accept=".mptm,.mod,.s3m,.xm,.it,.667,.669,.amf,.ams,.c67,.cba,.dbm,.digi,.dmf,.dsm,.dsym,.dtm,.etx,.far,.fc,.fc13,.fc14,.fmt,.fst,.ftm,.imf,.ims,.ice,.j2b,.m15,.mdl,.med,.mms,.mt2,.mtm,.mus,.nst,.okt,.plm,.psm,.pt36,.ptm,.puma,.rtm,.sfx,.sfx2,.smod,.st26,.stk,.stm,.stx,.stp,.symmod,.tcb,.gmc,.gtk,.gt2,.ult,.unic,.wow,.xmf,.gdm,.mo3,.oxm,.umx,.xpk,.ppm,.mmcmp">
       </div>
       <div id="chooseurl" class="banner">
         <div>
@@ -105,6 +111,8 @@
           <a class="song" data-modurl="/0scr/Modules/2nd_pm.s3m"><class class="size">588kb</class>UnreaL ][ / PM
           </a>
           <a class="song" data-modurl="/0scr/Modules/kZ - PowerCHM 6.7 crk.xm"><class class="size">272kb</class>- Angry#Youth
+          </a>
+          <a class="song" data-modurl="/0scr/Modules/Classic - Ski Or Die intro.fc14"><class class="size">17kb</class>Ski Or Die intro
           </a>
         </div>
       </div>

@@ -1,8 +1,14 @@
-window['libopenmpt'] = {};
-    libopenmpt.locateFile = function (filename) {
-      return "//cdn.jsdelivr.net/gh/deskjet/chiptune2.js@master/" + filename;
-    };
+window['libopenmpt'] = window['libopenmpt'] || {};
+    if (!libopenmpt.locateFile) {
+      libopenmpt.locateFile = function (filename) {
+        return './' + filename;
+      };
+    }
+    var existingRuntimeInit = libopenmpt.onRuntimeInitialized;
     libopenmpt.onRuntimeInitialized = function () {
+      if (typeof existingRuntimeInit === 'function') {
+        existingRuntimeInit();
+      }
       var player;
       var currentBuffer;
       var volume = 1;
@@ -17,17 +23,18 @@ window['libopenmpt'] = {};
       }
 
       function setMetadata(path) {
-        var metadata = player.metadata();
-        var filename = path.name || path.split('/').pop() || path;
+        var filename = (path && (path.name || path.split('/').pop())) || path || 'unknown';
         document.getElementById('filename').innerHTML = filename;
-        if (metadata['title'] != '') {
+
+        var metadata = player && player.currentPlayingNode && player.currentPlayingNode.modulePtr ? player.metadata() : {};
+        if (metadata['title'] && metadata['title'] != '') {
           document.getElementById('title').innerHTML = metadata['title'];
         }
         else {
           document.getElementById('title').innerHTML = '';
         }
 
-        if (metadata['artist'] != '') {
+        if (metadata['artist'] && metadata['artist'] != '') {
           document.getElementById('artist').innerHTML = '<br />' + metadata['artist'];
         }
         else {
