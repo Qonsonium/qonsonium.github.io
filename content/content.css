@@ -152,12 +152,13 @@ body {
   flex-shrink: 0;
 }
 
+
 #volume-container {
   position: absolute;
-  right: 40px;
+  right: 70px;
   top: 167px;
-  height: 81px;
-  width: 47px;
+  height: 5px;
+  width: 5px;
 }
 
 .volume-arrow {
@@ -168,11 +169,10 @@ body {
   user-select: none;
   pointer-events: none;
   -webkit-user-drag: none;
+  z-index: -1;
 }
 
-/*
-The old style of the volume control was a simple rectangle with a gradient background. The new style uses a repeating linear gradient to create a more visually appealing design.
-.volume-background {
+/*.volume-background {
   height: 81px;
   width: 31px;
   align-items: center;
@@ -201,26 +201,18 @@ The old style of the volume control was a simple rectangle with a gradient backg
     1px 100%;
 
   background-repeat: no-repeat;
-} 
+} */
 
 #volume {
-  margin-left: 5px;
-  margin-top: 3px;
-  writing-mode: vertical-lr;
-  direction: rtl;
-  -webkit-appearance: none;
-  appearance: none;
-  height: 65px;
+  margin-left: 0px;
+  margin-top: 8px;
+  width: 54px;
   background: transparent;  
-  outline: none;
-  
 }
 
- ── Thumb ── 
 #volume::-moz-range-thumb {
-  top: 3px;
-  width: 21px;
-  height: 11px;
+  width: 11px;
+  height: 24px;
   border-radius: 0;
   background: #c3c3c3;
   box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
@@ -230,8 +222,8 @@ The old style of the volume control was a simple rectangle with a gradient backg
 
 #volume::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 21px;
-  height: 11px;
+  width: 11px;
+  height: 24px;
   border-radius: 0;
   background: #c3c3c3;
   box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
@@ -240,19 +232,16 @@ The old style of the volume control was a simple rectangle with a gradient backg
   margin-left: -8px;
 }
 
- /*── Track ──
+ /*── Track ──*/
 #volume::-moz-range-track {
-  box-shadow: inset -1px -1px #ffffff, inset 1px 1px #828282, inset -2px -2px #c3c3c3, inset 2px 0px rgb(0, 0, 0);
   width: 4px;
-  
 }
 
 #volume::-webkit-slider-runnable-track {
-  box-shadow: inset -1px -1px #ffffff, inset 1px 1px #828282, inset -2px -2px #c3c3c3, inset 2px 0px rgb(0, 0, 0);
   width: 4px;
   background: #c0c0c0;
   margin-left: 6px;
-}*/
+}
 
 .controles {
   position: absolute;
